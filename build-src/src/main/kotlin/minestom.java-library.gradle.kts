@@ -23,6 +23,7 @@ repositories {
 dependencies {
     // Core dependencies
     api(libs.jetbrainsAnnotations)
+    api(libs.jSpecify)
 
     // Testing
     testImplementation(libs.bundles.junit)
