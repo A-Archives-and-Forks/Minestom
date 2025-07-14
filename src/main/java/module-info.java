@@ -4,11 +4,11 @@ import org.jspecify.annotations.NullMarked;
 module net.minestom.server {
     requires static org.jspecify; // TODO remove this when jspecify matures.
     requires static org.jetbrains.annotations;
-    requires net.kyori.adventure.nbt;
     requires com.google.gson;
     requires it.unimi.dsi.fastutil;
     requires jdk.unsupported; // Unsafe
     requires net.kyori.adventure;
+    requires net.kyori.adventure.nbt;
     requires net.kyori.adventure.key;
     requires net.kyori.examination.api;
     requires org.slf4j;
