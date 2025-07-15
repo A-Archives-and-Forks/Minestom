@@ -1,3 +1,6 @@
+import org.jspecify.annotations.NullMarked;
+
+@NullMarked
 module net.minestom.testing {
     requires static org.jspecify;
     requires static org.jetbrains.annotations; // TODO Remove when JSpecify is mature
