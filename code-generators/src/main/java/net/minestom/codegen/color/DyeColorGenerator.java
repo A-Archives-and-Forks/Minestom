@@ -76,9 +76,9 @@ public class DyeColorGenerator extends MinestomCodeGenerator {
                         MethodSpec.constructorBuilder()
                                 .addParameters(
                                         List.of(
-                                                ParameterSpec.builder(colorCN, "textureDiffuseColor").addAnnotation(NotNull.class).build(),
-                                                ParameterSpec.builder(colorCN, "textColor").addAnnotation(NotNull.class).build(),
-                                                ParameterSpec.builder(colorCN, "fireworkColor").addAnnotation(NotNull.class).build(),
+                                                ParameterSpec.builder(colorCN, "textureDiffuseColor").build(),
+                                                ParameterSpec.builder(colorCN, "textColor").build(),
+                                                ParameterSpec.builder(colorCN, "fireworkColor").build(),
                                                 ParameterSpec.builder(TypeName.INT, "mapColorId").build()
                                         )
                                 )
@@ -89,17 +89,17 @@ public class DyeColorGenerator extends MinestomCodeGenerator {
                                 .build(),
                         MethodSpec.methodBuilder("color")
                                 .addModifiers(Modifier.PUBLIC)
-                                .returns(colorCN.annotated(AnnotationSpec.builder(NotNull.class).build()))
+                                .returns(colorCN)
                                 .addStatement("return this.textureDiffuseColor")
                                 .build(),
                         MethodSpec.methodBuilder("textColor")
                                 .addModifiers(Modifier.PUBLIC)
-                                .returns(colorCN.annotated(AnnotationSpec.builder(NotNull.class).build()))
+                                .returns(colorCN)
                                 .addStatement("return this.textColor")
                                 .build(),
                         MethodSpec.methodBuilder("fireworkColor")
                                 .addModifiers(Modifier.PUBLIC)
-                                .returns(colorCN.annotated(AnnotationSpec.builder(NotNull.class).build()))
+                                .returns(colorCN)
                                 .addStatement("return this.fireworkColor")
                                 .build(),
                         MethodSpec.methodBuilder("red")

@@ -11,11 +11,17 @@ module net.minestom.server {
     requires net.kyori.adventure.nbt;
     requires net.kyori.adventure.key;
     requires net.kyori.examination.api;
+    requires net.kyori.adventure.text.serializer.plain;
+    requires net.kyori.adventure.text.logger.slf4j;
+    requires net.kyori.adventure.text.serializer.gson;
+    requires net.kyori.adventure.text.serializer.legacy;
+    requires net.kyori.adventure.text.serializer.json;
     requires org.slf4j;
     requires org.jctools.core;
     requires jdk.jfr;
     requires java.desktop;
     requires java.management;
+    requires space.vectrix.flare.fastutil;
 
     // EXPORTS
     exports net.minestom.server;

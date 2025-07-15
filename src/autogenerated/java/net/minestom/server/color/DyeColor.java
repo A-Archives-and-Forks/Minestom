@@ -52,8 +52,7 @@ public enum DyeColor implements RGBLike {
 
     private final int mapColorId;
 
-    DyeColor(Color textureDiffuseColor, Color textColor,
-            Color fireworkColor, int mapColorId) {
+    DyeColor(Color textureDiffuseColor, Color textColor, Color fireworkColor, int mapColorId) {
         this.textureDiffuseColor = textureDiffuseColor;
         this.textColor = textColor;
         this.fireworkColor = fireworkColor;

@@ -99,12 +99,11 @@ public class GenericEnumGenerator extends MinestomCodeGenerator {
                 List.of(
                         // Constructor
                         MethodSpec.constructorBuilder()
-                                .addParameter(ParameterSpec.builder(String.class, "key").addAnnotation(NotNull.class).build())
+                                .addParameter(ParameterSpec.builder(String.class, "key").build())
                                 .addStatement("this.key = $T.key(key)", keyCN)
                                 .build(),
                         MethodSpec.methodBuilder("key")
                                 .addModifiers(Modifier.PUBLIC)
-                                .addAnnotation(NotNull.class)
                                 .addAnnotation(Override.class)
                                 .returns(keyCN)
                                 .addStatement("return this.key")
