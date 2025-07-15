@@ -2,8 +2,8 @@ import org.jspecify.annotations.NullMarked;
 
 @NullMarked
 module net.minestom.server {
-    requires static org.jspecify; // TODO remove this when jspecify matures.
-    requires static org.jetbrains.annotations;
+    requires static org.jspecify;
+    requires static org.jetbrains.annotations;  // TODO remove this when jspecify matures.
     requires com.google.gson;
     requires it.unimi.dsi.fastutil;
     requires jdk.unsupported; // Unsafe
