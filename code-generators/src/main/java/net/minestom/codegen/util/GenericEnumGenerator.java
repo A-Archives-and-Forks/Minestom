@@ -6,8 +6,7 @@ import com.google.gson.JsonObject;
 import com.squareup.javapoet.*;
 import net.minestom.codegen.Generators;
 import net.minestom.codegen.MinestomCodeGenerator;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,8 +33,8 @@ public class GenericEnumGenerator extends MinestomCodeGenerator {
     private boolean isPackagePrivate = false;
 
     public GenericEnumGenerator(
-            @NotNull String packageName, @NotNull String className,
-            @Nullable InputStream entriesFile, @NotNull File outputFolder
+            String packageName, String className,
+            @Nullable InputStream entriesFile, File outputFolder
     ) {
         this.packageName = packageName;
         this.className = className;
@@ -140,7 +139,7 @@ public class GenericEnumGenerator extends MinestomCodeGenerator {
         );
     }
 
-    protected @NotNull String nameGenerator(@NotNull String namespaceId) {
+    protected String nameGenerator(String namespaceId) {
         return toConstant(namespaceId);
     }
 }
